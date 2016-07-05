@@ -1,0 +1,16 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>DEMO - Pop Overlay</title>
+        <meta name="description" content="Popup window using jQuery. Also, you are able to append any html code to the window if you want.">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="./jquery.popOverlay.js"></script>
+    </head>
+    <body>
+        <script>
+            $.popup(function(popupWindow) {}, { text: 'You are seeing DEMO of Pop Overlay.' })
+                .popup(function() {popupWindow}, { text: 'Now, you\'ve already wait for this pop 2 seconds.', wait: 2000 })
+                .popup(function() {popupWindow}, { text: 'You can close this popup window by clicking the gray area.', wait: 4000 })
+        </script>
+    </body>
+</html>
