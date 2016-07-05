@@ -14,12 +14,13 @@
         _options.css = options.css || {
             'color': '#fff',
             'font-size': '130%',
-            'padding': '4em 10px',
+            'margin': '4em 10px',
             'text-align': 'center'
         };
 
-        $('.popup-box').find('*').remove();
-        var popupBox = $('.popup-box');
+        $('.pop-overlay').remove();
+        $('body').append('<div class="pop-overlay">');
+        var popupBox = $('.pop-overlay');
         popupBox.show();
         popupBox.height($(window).height());
         popupBox.width('100%');
@@ -33,7 +34,7 @@
         });
 
         popupBox.click(function(e) {
-            if ($(e.target).parent().find('.popup-box').length > 0) {
+            if ($(e.target).parent().find(popupBox).length > 0) {
                 $(popupBox).hide();
             }
         });
